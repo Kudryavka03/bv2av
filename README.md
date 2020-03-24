@@ -5,4 +5,4 @@ bv/av互转(c++ version)
 # 说明
 用于互相转换Bilibili的BV号和AV号
 # 其他
-即下即用
+即下即用 Release下载页面:https://github.com/2427237507/bv2av/releases
