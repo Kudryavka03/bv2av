@@ -13,26 +13,18 @@ string dec(string x1) {
     long long r = 0;
     for (int a = 0; a < 6; a++) {
         r += tr[x1[s[a]]] * pow(58, a);
-        //cout <<r <<"\n";
     }
-    //cout << "\n" << (a1 - add1);
     return to_string(((long long)r - (long long)add1) ^ xor1);
 }
 string enc (long long  x1) {
     x1 = (x1 ^ xor1) + add1;
-    cout << "x1=" << x1 << "\n";
     char r[] = "BV1  4 1 7  ";
-    //char r[] = { "B", "V", "1", " ", " ", "4", " ", "1", " ", "7", " ", " " };
-    //cout << r << "\n";
     for (int i = 0; i < 6; i++)
     {
-        
         r[s[i]] = table[(int)(x1 / (long long)pow(58, i) % 58)];
-        cout << (int)(x1 / (long long)pow(58, i) % 58) <<"\n";
     }
     string rstring = "";
     int r1 = sizeof(r);
-    cout << r1 << "\n";
     for (int j = 0; j <r1; j++)
     {
         rstring += r[j];
